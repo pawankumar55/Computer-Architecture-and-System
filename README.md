@@ -10,17 +10,15 @@ The first screen asks for name and operating systems
 
 #Enter 
 
-  Name:ubuntu-1
-
-  Type:Linex
-
-  Version: Ubuntu(32)
-
+  Name:ubuntu-1  
+  Type:Linex  
+  Version: Ubuntu(32)  
   Then Next
   
-  From the next screen select memory size 512MB.
-  
-  From the next screen select "Create a virtual hard drive now"and then select create.
-  
- Then select VDI(virtualbox disk image) and then press next.  
+From the next screen select memory size 512MB.  
+From the next screen select "Create a virtual hard drive now"and then select create.  
+Then select VDI(virtualbox disk image) and then press next.  
+Choose  "Dynamically allocated" and click next.  
+Change the size to 10GB. Click Create.  
+Now you will see the virtual machine created but in state " powered off".
 

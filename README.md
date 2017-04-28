@@ -1,5 +1,3 @@
-# hello-world
-project -1
 ##Introduction
 
 #Virtual machine

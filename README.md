@@ -45,6 +45,22 @@ you should now see:
 
 click ok.  
 
-#Start the Virtual Machine
+#Start the Virtual Machine  
+
+Select the virtual machineand click the green start arrow - or double click the virtual machine and your virtual machine will start.  
+The ubuntu installer should start. Click inside the window. Note that you may have to press the host key to get your mouse out again.  
+Select your language and press F3 if you want to select a non -US keyboard layout.  
+Next press F4 and select" Install a minimal virtual machine".  
+Then select " Install Ubuntu Server" from the front menu.  
+We do strongly suggest the following settings:  
+
+-Encrypt your home directory? No  
+-Partitioning method: Guided - Use entire disk  
+-Select none for HTTP proxy  
+-No automatic updates  
+-Then choose software to install, move to Open SSH Server and hit space to select it, but leave every thing else unselected.  
+-Install GRUB boot loader to the master boot record? Yes  
+#Restart
+
 
 

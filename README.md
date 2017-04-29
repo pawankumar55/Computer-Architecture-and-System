@@ -20,5 +20,31 @@ From the next screen select "Create a virtual hard drive now"and then select cre
 Then select VDI(virtualbox disk image) and then press next.  
 Choose  "Dynamically allocated" and click next.  
 Change the size to 10GB. Click Create.  
-Now you will see the virtual machine created but in state " powered off".
+Now you will see the virtual machine created but in state " powered off".  
+
+#Inserting a virtual cd..  
+
+before starting a virtual machine, click on setting button.  
+Click on storage..
+You should see :  
+-Controller: IDE    
+-Empty (with a cd icon)  
+-Controller: SATA  
+-ubuntu-1.vdi  
+
+Click on CD icon by Empaty. To the right you will see:  
+-Attributes  
+-CD/DVD DRives: IDE Secondary Master, and another cd icon  
+click on this CD icon. From the menu which appears, select"choose a virtual CD/DVD disk file.."  
+Browse to the directory where you copied the ubuntu server ISO image, and select it.  
+you should now see:  
+-Controller: IDE  
+-ubuntu- 12.04-3-server -i386  
+-Controller: SATA  
+-Ubuntu-1.vdi  
+
+click ok.  
+
+#Start the Virtual Machine
+
 

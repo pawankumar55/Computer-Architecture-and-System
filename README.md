@@ -137,7 +137,77 @@ phpinfo();
 
 Press ESC when you’re done entering text then enter the command :wq to save your file and close Vi.
 Open your web browser in your host computer and go to the address localhost/info.php You should
-see a page containing configuration information.
+see a page containing configuration information.  
+
+###Content Management System (CMS)  
+
+A content management system is a computer application that supports creation and editing of digital content. We are going
+to use the world’s most popular CMS Wordpress, an open source CMS, which is used on
+approximately 27% of websites.  
+
+1. Install WordPress  
+
+We’ve got all our prerequisites installed and checked that they’re up and running. Now it’s time to
+install the CMS. Run the following command to download the latest WordPress package from their
+repository:  
+$ wget -c http://wordpress.org/latest.tar.gz  
+
+When the download is complete we need to extract the files from the compressed folder. Enter the following command to extract the archive to the current directory:  
+
+$ tar -xzvf latest.tar.gz  
+
+We need to move all the contents of the WordPress folder to the default Apache root directory with
+the following command.  
+
+$ sudo rsync -av wordpress/* /var/www/html/  
+
+Finally we need to set the correct permissions on the website directory. That is to give ownership of
+the word files to the web server (called www-data) :  
+
+$ sudo chown -R www-data:www-data /var/www/html  
+
+Then change permissions to allow anyone to read and execute the file but only the owner will be
+able to write.  
+
+$ sudo chmod -R 755 /var/www/html  
+
+2. Create a MySQL database for wordpress  
+
+Before we can run Wordpress we need to set up a MySQL database for it. Enter the following
+command to open MySQL  
+
+$ mysql -u root -p  
+
+With MySQL now open enter the following commands line by line to create your database. Make
+sure you use a strong and secure password.  
+
+CREATE DATABASE wp_project;  
+
+GRANT ALL PRIVILEGES ON wp_project.* TO ‘your_username_here’@’localhost’ IDENTIFIED BY
+‘your_chosen_password_here’;  
+
+FLUSH PRIVILEGES;  
+
+EXIT;  
+
+We can restart the web server and MySQL service to allow changes to take affect.  
+
+sudo systemctl restart apache2.service  
+
+sudo systemctl restart mysql.service  
+
+Go to the address http://localhost:80/wp-config-sample.php
+You will be prompted to enter the information about your MySQL database which you created in the
+previous step.  
+
+3. Configure your wordpress site  
+
+Once you have finished connecting your MySQL database to wordpress it should trigger the start of
+the wordpress, browser-based setup. You will need to enter some details here (make sure you save
+the password).
+Once you’ve finished this process you should be logged into the wordpress Dashboard from which
+you administer your website. Make sure you can access your index page (you may need to delete the
+old apache “It works!” index.html file before you can see the index.php file wordpress has created.
 
 
 

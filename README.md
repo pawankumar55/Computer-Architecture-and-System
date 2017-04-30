@@ -1,14 +1,14 @@
 ## Introduction
 
-# Virtual machine
+## Virtual machine
 
 A virtual machine is a software computer that, like a physical computer, runs an operating system and applications. The virtual machine is comprised of a set of specification and configuration files and is backed by the physical resources of a host.
 
-### Configuration and deployment of the virtual machine
+## Configuration and deployment of the virtual machine
 
 The first screen asks for name and operating systems
 
-# Enter 
+## Enter 
 
   Name:ubuntu-1  
   Type:Linex  
@@ -22,7 +22,7 @@ Choose  "Dynamically allocated" and click next.
 Change the size to 10GB. Click Create.  
 Now you will see the virtual machine created but in state " powered off".  
 
-# Inserting a virtual cd..  
+## Inserting a virtual cd..  
 
 Before starting a virtual machine, click on setting button.  
 Click on storage..
@@ -48,7 +48,7 @@ You should now see:
 
 click ok.  
 
-# Start the Virtual Machine  
+## Start the Virtual Machine  
 
 Select the virtual machineand click the green start arrow - or double click the virtual machine and your virtual machine will start.  
 The ubuntu installer should start. Click inside the window. Note that you may have to press the host key to get your mouse out again.  
@@ -64,7 +64,7 @@ We do strongly suggest the following settings:
 - Then choose software to install, move to Open SSH Server and hit space to select it, but leave every thing else unselected.  
 - Install GRUB boot loader to the master boot record? Yes  
 
-# Try the console  
+## Try the console  
 
 Here are few basiuc commands you can try:  
 
@@ -73,14 +73,14 @@ $ uname -a
 $ df -h  
 $ ls /  
 
-# Mouse cursor  
+## Mouse cursor  
 
 if u want a mouse cursor in ubuntu server, you need to install the package "gpm".These commands need to run with "Sudo".  
 
 $ sudo apt-get update packages  
 $ sudo apt-get install gpm  
 
-# ACPI shut down  
+## ACPI shut down  
 
 $ sudo apt-get install acpid  
 
@@ -108,7 +108,7 @@ Forwarding
 
 MySQl is a open source database program. It's vital for many features of modern website to maintain database for purpose such as allowing users to login, saving any user generated input to the website.  
 
-# To install the MySQL database server run the following commands:  
+## To install the MySQL database server run the following commands:  
 
 $sudo apt-get install mysql-client mysql-server 
 
@@ -142,7 +142,7 @@ Press ESC when you’re done entering text then enter the command :wq to save yo
 Open your web browser in your host computer and go to the address localhost/info.php You should
 see a page containing configuration information.  
 
-### Content Management System (CMS)  
+## Content Management System (CMS)  
 
 A content management system is a computer application that supports creation and editing of digital content. We are going
 to use the world’s most popular CMS Wordpress, an open source CMS, which is used on
@@ -212,7 +212,7 @@ Once you’ve finished this process you should be logged into the wordpress Dash
 you administer your website. Make sure you can access your index page (you may need to delete the
 old apache “It works!” index.html file before you can see the index.php file wordpress has created.
 
-### Conclusion  
+## Conclusion  
 
 
 

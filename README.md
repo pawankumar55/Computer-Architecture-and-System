@@ -60,7 +60,95 @@ We do strongly suggest the following settings:
 -No automatic updates  
 -Then choose software to install, move to Open SSH Server and hit space to select it, but leave every thing else unselected.  
 -Install GRUB boot loader to the master boot record? Yes  
-#Restart
+
+#Try the console  
+
+Here are few basiuc commands you can try:  
+
+$ update  
+$uname -a  
+$df -h  
+$ls /  
+
+#Mouse cursor  
+
+if u want a mouse cursor in ubuntu server, you need to install the package "gpm".These commands need to run with "Sudo".  
+
+$ sudo apt-get update packages  
+$ sudo apt-get install gpm  
+
+#ACPI shut down  
+
+$ sudo apt-get install acpid  
+
+##Deploment of a LAMP stack on your Ubuntu Server...   
+
+1. Install Apache Web-Server 
+
+Enter the following commands to install the Apache web server:  
+
+$ sudo apt-get install apache2 apache2-utils  
+$ sudo systemctl enable apache2  
+
+We cam start the service by entering the command:  
+
+$ sudo systemctl start apache2  
+
+Apache server is up and running. First we will need to make sure that our
+network adapter settings make our VM visible from our host. We will need to shut down our VM and
+change the settings on our virtual network adapter. By default our adapter is configured as a
+Network Address Translation. We can set up port forwarding with our host to make it accessible
+from the host. These settings can be accessed through the Settings – Network – Advanced – Port
+Forwarding
+
+2. Install MySQL  
+
+MySQl is a open source database program. It's vital for many features of modern website to maintain database for purpose such as allowing users to login, saving any user generated input to the website.  
+
+#To install the MySQL database server run the following commands:  
+
+$sudo apt-get install mysql-client mysql-server 
+
+We should run the following command to see how security would normally be configured:  
+
+$ sudo mysql_secure_installation  
+
+3. Install PHP and Modules  
+
+PHP is an open source server-side scripting language mainly used for web development. It allows
+web developers to create dynamic, interactive websites. Enter the following command to install php
+and the modules we will need for our Content Management System.  
+
+$sudo apt-get install php7.0 php7.0-mysql libapache2-mod-php7.0 php7.0-cli php7.0-cgi php7.0-gd  
+
+When the command is finished running we need to test that PHP is working. We will do this by
+creating a info.php file in our /var/www/html directory.  
+
+Type the following command:  
+
+$ sudo vi /var/www/html/info.php  
+
+This will open a new file called info.php. Press the i key to enter insert mode and then type the
+following php code in:  
+
+<?php
+phpinfo();
+?>  
+
+Press ESC when you’re done entering text then enter the command :wq to save your file and close Vi.
+Open your web browser in your host computer and go to the address localhost/info.php You should
+see a page containing configuration information.
+
+
+
+
+
+
+
+
+
+
+
 
 
 

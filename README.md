@@ -1,10 +1,10 @@
-## Introduction
+# Introduction
 
 ## Virtual machine
 
 A virtual machine is a software computer that, like a physical computer, runs an operating system and applications. The virtual machine is comprised of a set of specification and configuration files and is backed by the physical resources of a host.
 
-## Configuration and deployment of the virtual machine
+# Explanation Configuration and Deployment of the virtual machine
 
 The first screen asks for name and operating systems
 
@@ -213,6 +213,9 @@ you administer your website. Make sure you can access your index page (you may n
 old apache “It works!” index.html file before you can see the index.php file wordpress has created.
 
 ## Conclusion  
+
+   The primary objective of the Virtual Machine project has been to provide an interested reader with an introduction to the advantages and uses of Virtual Machines. The initial focus was to define the four major conceptual models of Virtual Machines used today, The IBM Model as demonstrated in the IBM S/390, the Java Virtual Machine Model evident with multi platform Internet applications and the Extended Machine Model utilized in modern operating systems. Followed by the Unix Virtual Machine model represented by the Unix user shell. The basis for all four Virtual Machine models is the combining of instruction sets to simulate devices or machines. The prime characteristics from each type of Virtual Machine solved a distinctly different problem that confronted computer and software engineers.      The power and success of the Virtual Machine concept comes from the ability of users to access and utilize functions and devices that are simply combinations of instruction sets. The ability to provide a virtual solution to the real limitations of modern computer systems is a very powerful tool that is continuing to extend the abilities of modern computer systems.
+    
 
 
 
